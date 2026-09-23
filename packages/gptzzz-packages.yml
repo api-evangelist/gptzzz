@@ -1,0 +1,11 @@
+name: KaiGPT Packages
+generated: '2026-09-23'
+method: none
+source: https://gptzzz.ai/downloads/
+packages: []
+note: >-
+  No first-party SDK or client library was found on a package registry, and the docs point developers at the upstream
+  vendors' own SDKs (OpenAI Python SDK etc.) with a changed Base URL. KaiGPT does ship a desktop configurator, not an SDK:
+  the "GPTZZZ desktop client" for macOS / Windows / Windows ARM64 at https://gptzzz.ai/downloads/, version 3.21.0
+  (VERSION = "3.21.0" in https://gptzzz.ai/downloads/app.js), GPTZZZ-v3.21.0-macOS.dmg answering 200 with Last-Modified
+  2026-09-12; it signs in to a GPTZZZ account and writes the configuration for Claude Code, Codex, Gemini CLI and OpenCode.

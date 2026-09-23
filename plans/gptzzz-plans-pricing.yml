@@ -1,0 +1,14 @@
+name: KaiGPT Plans
+generated: '2026-09-23'
+method: none
+source: https://gptzzz.ai/docs/
+audience: unclear
+pricing_basis: none
+published: false
+delivery: {model: managed}
+plan_count: 0
+plans: []
+note: >-
+  No public prices. The docs say "模型广场 目前尚未列出公开型号和价格" and that model IDs, billing units and group
+  multipliers are shown in the console; the public model plaza API (https://gptzzz.ai/api/v1/model-plaza, probed
+  2026-09-23) returned {"code":0,"message":"success","data":{"description":"","groups":[]}}. https://gptzzz.ai/pricing returns 404.

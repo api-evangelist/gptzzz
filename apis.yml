@@ -1,0 +1,112 @@
+name: KaiGPT
+image: https://gptzzz.ai/blog/assets/og-cover.png
+aid: gptzzz
+description: KaiGPT (gptzzz.ai, site name "gptzzz.ai", subtitle "AI API 中转服务 中转站") is an independent third-party AI API relay
+  (中转站) and multi-model gateway for Chinese-speaking developers. It exposes an OpenAI-compatible interface at https://gptzzz.ai/v1
+  (chat completions, Responses, embeddings, images), a Claude Messages route at https://gptzzz.ai/v1/messages and a Gemini-style
+  v1beta surface, authenticated with a KaiGPT API key via Authorization Bearer, x-api-key or x-goog-api-key. Model IDs, group
+  multipliers and limits are shown only in the logged-in console; the public model plaza lists no models or prices yet. It
+  also ships a desktop client that configures Claude Code, Codex, Gemini CLI and OpenCode, and a Chinese knowledge base on
+  relay selection, security and compliance. KaiGPT states it is not affiliated with the model vendors it routes to; it resells
+  access to other providers' model APIs rather than training models itself.
+url: https://raw.githubusercontent.com/api-evangelist/gptzzz/refs/heads/main/apis.yml
+x-type: company
+x-source: apis-io-submission
+x-submitted-by: lin009hg@gmail.com, apis.io/add 2026-09-22
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-23 (local-v5; was apis.io/add submission worked by the support sweep 2026-09-23; host
+  probed healthy (root 200, invented path 404, llms.txt 200); listed on Kin's decision 2026-09-23 despite relay/reseller posture)
+specificationVersion: '0.23'
+created: '2026-09-23'
+modified: '2026-09-23'
+tags:
+- Artificial Intelligence
+- LLM Gateway
+- API Relay
+- OpenAI Compatible
+- Claude
+- Gemini
+- Large Language Models
+- China
+common:
+- type: Conventions
+  url: conventions/gptzzz-conventions.yml
+- type: Authentication
+  url: authentication/gptzzz-authentication.yml
+- type: Lifecycle
+  url: lifecycle/gptzzz-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/gptzzz-problem-types.yml
+- type: LLMsTxt
+  url: llms/gptzzz-llms.txt
+- type: Hosts
+  url: hosts/gptzzz-hosts.yml
+- type: Vendors
+  url: vendors/gptzzz-vendors.yml
+- type: StatusPage
+  url: https://gptzzz.ai/status/
+- type: DomainSecurity
+  url: security/gptzzz-domain-security.yml
+- type: Website
+  url: https://gptzzz.ai/
+- type: Documentation
+  url: https://gptzzz.ai/docs/
+- type: GettingStarted
+  url: https://gptzzz.ai/blog/api-zhongzhuan-how-to-use/
+- type: Support
+  url: https://gptzzz.ai/support/
+- type: Blog
+  url: https://gptzzz.ai/blog/
+- type: SignUp
+  url: https://gptzzz.ai/register
+- type: Login
+  url: https://gptzzz.ai/login
+- type: Documentation
+  url: https://gptzzz.ai/docs/glossary/
+- type: ErrorCodes
+  url: https://gptzzz.ai/docs/api-error-codes/
+maintainers:
+- FN: KaiGPT Support
+  email: support@gptzzz.ai
+apis:
+- aid: gptzzz:kaigpt-openai-compatible-api
+  name: KaiGPT OpenAI-Compatible API
+  description: 'OpenAI-compatible relay interface. The docs give the Base URL https://gptzzz.ai/v1 for OpenAI-compatible clients
+    (which append /chat/completions or /responses); requests are authenticated with a KaiGPT API key sent as Authorization:
+    Bearer. Available model IDs, multipliers and limits are shown in the logged-in console.'
+  humanURL: https://gptzzz.ai/docs/
+  baseURL: https://gptzzz.ai/v1
+  tags:
+  - OpenAI Compatible
+  - Chat
+  - LLM Gateway
+  properties:
+  - type: Documentation
+    url: https://gptzzz.ai/docs/
+  - type: Documentation
+    url: https://gptzzz.ai/blog/openai-api-quickstart/
+  - type: Documentation
+    url: https://gptzzz.ai/blog/openai-compatible-api-migration/
+- aid: gptzzz:kaigpt-claude-messages-api
+  name: KaiGPT Claude Messages API
+  description: Claude Messages relay route. The docs give https://gptzzz.ai/v1/messages for Claude Messages requests and say
+    Claude clients must use that protocol configuration rather than the OpenAI request body; the gateway accepts the key in
+    the x-api-key header.
+  humanURL: https://gptzzz.ai/blog/claude-api-quickstart/
+  baseURL: https://gptzzz.ai
+  tags:
+  - Claude
+  - Messages
+  - LLM Gateway
+  properties:
+  - type: Documentation
+    url: https://gptzzz.ai/docs/
+  - type: Documentation
+    url: https://gptzzz.ai/blog/claude-api-quickstart/
+  - type: Documentation
+    url: https://gptzzz.ai/blog/claude-code-api-relay/
+x-enrichment:
+  date: '2026-09-23'
+  status: enriched
+  artifacts_added: 13
+  pass: local-v5

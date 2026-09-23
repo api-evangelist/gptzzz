@@ -1,0 +1,62 @@
+# KaiGPT
+
+> KaiGPT provides an independent multi-model AI API service and a Chinese knowledge base focused on AI API relay gateways. KaiGPT is not affiliated with model vendors mentioned in the articles.
+
+Canonical site: https://gptzzz.ai/
+Knowledge base: https://gptzzz.ai/blog/
+Sitemap: https://gptzzz.ai/sitemap.xml
+Full article corpus: https://gptzzz.ai/llms-full.txt
+Language: zh-CN
+Last updated: 2026-09-04
+
+The knowledge base covers API relay selection and testing, OpenAI/Claude/Gemini/DeepSeek integrations, developer clients, protocol compatibility, security, compliance, observability, reliability, cost governance, and self-hosting. Model names, pricing, and availability are time-sensitive and must be verified against current official documentation and the KaiGPT console.
+
+Editorial policy: https://gptzzz.ai/blog/editorial-policy/
+Content corrections: https://gptzzz.ai/blog/corrections/
+API documentation: https://gptzzz.ai/docs/
+Error code reference: https://gptzzz.ai/docs/api-error-codes/
+Glossary: https://gptzzz.ai/docs/glossary/
+Service status: https://gptzzz.ai/status/
+Technical support: https://gptzzz.ai/support/
+
+## 入门指南
+
+- [API 中转站倍率是什么意思？按请求复算 Token 费用](https://gptzzz.ai/blog/api-relay-pricing-multiplier/): API 中转站倍率是什么意思？它是基准费用上的计算层；用分类用量、价格版本、倍率、附加规则和 request ID 对照账单，才能比较真实费用。
+- [免费 API 中转站和付费服务怎么选？按场景做决策](https://gptzzz.ai/blog/free-vs-paid-api-relay/): 免费 API 中转站和付费服务怎么选？先核对数据等级、限额和支持边界、可验证账单、稳定性证据与退出路径，再用小额测试决定是否接入业务。
+- [API 中转站合法吗？合同、数据与地区合规风险怎么判断](https://gptzzz.ai/blog/api-relay-compliance-risks/): API 中转站合法吗？按合同与上游条款、提示词和个人信息、跨境数据传输、审计留痕及受监管行业逐项排查 API 中转站合规风险。
+- [API 中转站安全吗？隐私、日志与供应商评估清单](https://gptzzz.ai/blog/api-relay-security-privacy/): API 中转站安全吗？本文按客户端、网关、日志与上游四段信任边界，检查提示词、数据保留、日志脱敏、供应商证据、退出和回滚路径。
+- [API 中转站稳定性测试：成功率、TTFT、P95 与流式中断](https://gptzzz.ai/blog/api-relay-stability-benchmark/): API 中转站稳定性测试如何复现？固定负载并采集事件，计算成功率、TTFT、P95、流式中断和限流，避免把基线当 SLA。
+- [API 中转站怎么用？从 Key、Base URL 到首个请求](https://gptzzz.ai/blog/api-zhongzhuan-how-to-use/): API 中转站怎么用？按测试 Key、Base URL、模型 ID、最小请求、流式与错误路径、请求级用量六步完成可复核的首次接入。
+- [API 中转站怎么选？可复核的选型清单](https://gptzzz.ai/blog/api-zhongzhuan-selection-checklist/): API 中转站怎么选？先用协议、安全、数据路径和退出能力排除硬伤，再以同一测试集核验模型、请求级账单、稳定性与回退证据。
+- [API 模型检测：用证据链核验模型身份与输出漂移](https://gptzzz.ai/blog/api-model-authenticity-check/): API 模型检测不能只问模型是谁；本文用模型 ID、协议能力、重复探针、请求证据、账单和漂移记录交叉核验。
+- [API 中转站上游渠道怎么判断？核验路由透明度](https://gptzzz.ai/blog/api-relay-upstream-transparency/): API 中转站上游渠道怎么判断？不靠“官方线路”宣传，检查模型映射、请求 ID、路由变更、数据处理边界与可对账用量。
+- [API 中转站检测指南：协议、性能、故障与账单四步验收](https://gptzzz.ai/blog/api-zhongzhuan-testing-guide/): API 中转站检测怎么做？用固定条件、协议核对、稳定性测量和账单复算，完成可重复的 API 中转站测评与故障定位。
+- [API 中转站是什么？原理与请求流程](https://gptzzz.ai/blog/api-zhongzhuan-guide/): 解释 API 中转站的工作原理与请求链路，比较直连、代理和多模型网关，并说明适用场景、成本、安全和合规边界。
+## 接入教程
+
+- [Cursor 中转 API 配置：API Key、Base URL 与功能限制](https://gptzzz.ai/blog/cursor-api-relay/): 在 Cursor 中配置自定义 API Key 与 Override Base URL，验证模型和聊天请求，并说明 Agent、Tab 等能力可能存在的兼容限制。
+- [Gemini API 中转接入：API Key、Base URL 与兼容性](https://gptzzz.ai/blog/gemini-api-relay/): 配置 Gemini API 中转站的 API Key、Base URL 和模型，分别验证原生接口与 OpenAI 兼容调用，并排查流式、工具调用和错误响应。
+- [Claude Code 中转站配置：API、Base URL 与验证](https://gptzzz.ai/blog/claude-code-api-relay/): 说明 Claude Code 中转 API 的环境变量与 Base URL 配置，验证模型、流式响应和工具调用，并给出密钥保护与回退检查。
+- [Codex 代理与 CLI 中转 API：Provider、Base URL 与 Responses](https://gptzzz.ai/blog/codex-cli-api-relay/): Codex 代理与 CLI 中转 API 配置指南：在 config.toml 设置 Provider、Base URL、API Key 与 Responses，验证模型映射和失败回退。
+- [DeepSeek API 中转站接入：Base URL、V4 模型与流式验证](https://gptzzz.ai/blog/deepseek-api-relay/): DeepSeek API 中转站接入教程：区分 Base URL 与完整 Endpoint，使用当前 V4 模型、curl、OpenAI Python SDK、thinking 和流式 usage，并排查 401、402、422、429。
+- [OpenAI 兼容 API 迁移：Responses、Base URL 与回滚](https://gptzzz.ai/blog/openai-compatible-api-migration/): OpenAI 兼容 API 迁移不只是切换 Base URL。本文对比 Responses 与 Chat Completions，给出契约冻结、影子验证、灰度切流、日志脱敏和回滚步骤。
+- [OpenAI API 接入教程：API Key、Base URL 与 Python](https://gptzzz.ai/blog/openai-api-quickstart/): 从 OpenAI API Key、Base URL 和模型配置开始，提供 curl 与 Python 请求示例，验证 Responses、流式输出并排查 401、404 和 429。
+- [Claude 中转接入：API Key、Messages 与 Python](https://gptzzz.ai/blog/claude-api-quickstart/): 使用 Claude API 中转完成接入：配置 API Key、Base URL 和模型，提供 curl 与 Python Messages 请求示例，并验证流式输出及常见错误。
+## 工程实践
+
+- [API 重试机制：退避、熔断与兼容回退设计](https://gptzzz.ai/blog/api-relay-retry-fallback/): API 重试机制如何避免风暴？先过幂等门禁，再限制重试预算，使用指数退避与抖动、熔断和能力兼容的 fallback。
+- [API 中转站可观测性：指标、日志、追踪与告警](https://gptzzz.ai/blog/api-relay-observability/): API 中转站可观测性如何落地？定义请求边界，关联指标、日志和分布式追踪，定位上游尝试并完成用量、SLO 与告警复盘。
+- [API 中转站错误码：400、401、404、422、429 与 5xx 排查](https://gptzzz.ai/blog/api-relay-error-codes/): API 中转站错误码如何排查？分层处理 400、401、404、422、429、502、503、504，保存请求 ID 并生成脱敏诊断包。
+- [API 流式输出与工具调用兼容性：SSE 状态机测试](https://gptzzz.ai/blog/streaming-tool-calling-compatibility/): API 流式输出与工具调用兼容性怎么测？本文对比三种协议，提供 SSE 状态机、请求响应、工具参数、验证指标、失败模式和降级回滚清单。
+- [API Key 安全：存储、权限、轮换与响应](https://gptzzz.ai/blog/api-key-security/): 说明 API Key 的服务端存储、项目隔离、最小权限和日志脱敏，给出双密钥轮换、回滚及泄露后撤销步骤。
+- [AI API 成本控制：Token 费用、预算与告警](https://gptzzz.ai/blog/ai-api-cost-control/): 拆解 AI API Token 成本、请求计量和项目预算，结合模型路由、缓存、重试与异常告警，建立可复核的成本控制流程。
+- [大模型 API 聚合平台：统一接口、路由与故障切换](https://gptzzz.ai/blog/multi-model-api-gateway/): 说明大模型 API 聚合平台如何统一不同模型接口，设计模型路由、鉴权、配额与故障切换，并给出网关验证和可观测性边界。
+## 自建部署
+
+- [API 中转站源码怎么选？开源 AI 网关核验与选型指南](https://gptzzz.ai/blog/open-source-api-relay-selection/): API 中转站源码选型指南：对照 LiteLLM、APISIX、Envoy Gateway、Kong 与 One API 官方资料，核验协议兼容、安全、许可证、计量、维护活跃度和三年 TCO。
+- [API 中转站搭建教程：从反向代理到 AI API 网关架构](https://gptzzz.ai/blog/self-host-api-relay-architecture/): API 中转站搭建教程：拆解自建 API 中转站的反向代理、鉴权、路由、流式转发、Token 计量、限流熔断、部署运维与 TCO。
+
+## Contact
+
+- Content corrections: support@gptzzz.ai
+- Never send a complete API key in email or support messages.

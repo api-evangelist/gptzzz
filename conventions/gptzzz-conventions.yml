@@ -1,0 +1,19 @@
+name: KaiGPT Conventions
+generated: '2026-09-23'
+method: searched
+source: https://gptzzz.ai/docs/
+auth: {style: 'Authorization: Bearer (also x-api-key, x-goog-api-key)', see: authentication/gptzzz-authentication.yml}
+base_urls:
+  openai_compatible: https://gptzzz.ai/v1
+  claude_messages: https://gptzzz.ai/v1/messages
+  note: Docs warn that OpenAI-compatible clients append /chat/completions or /responses themselves, so /v1 must not be doubled; Claude clients use the Claude protocol configuration and not the OpenAI request body.
+request_id: Docs ask integrators to record the request identifier from response headers with UTC time, model ID and HTTP status for every failed call; the header name is not documented.
+errors: {see: errors/gptzzz-problem-types.yml}
+lifecycle: {see: lifecycle/gptzzz-lifecycle.yml}
+rate_limit_signaling: Not documented for KaiGPT itself; the error reference advises reading the retry-after header on 429 (OpenAI-compatible) and distinguishing rate limiting from insufficient balance.
+idempotency:
+  coverage: none
+  note: No idempotency key or replay protection is documented. The docs instead warn that retries must not cross non-repeatable business operations ("重试不会跨越不可重复的业务操作").
+reversibility:
+  status: none
+  note: The surface is metered model inference (chat, responses, messages, embeddings, images); no cancel, refund or reversal operation or window is documented. Billing and account issues are handled in the logged-in console.

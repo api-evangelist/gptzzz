@@ -1,0 +1,10 @@
+name: KaiGPT Regulatory Posture
+generated: '2026-09-23'
+method: none
+source: https://gptzzz.ai/
+signals: {}
+note: >-
+  Probed 2026-09-23: /accessibility, /privacy, /terms, /privacy-policy, /tos, /transparency, /security all 404;
+  /legal/subprocessors and /legal/dpa return the console SPA shell (same 7,587-byte page as /login), not a document.
+  The console's public settings list terms, usage-policy, supported-regions and service-specific-terms agreement
+  documents with empty content and login_agreement_enabled false.

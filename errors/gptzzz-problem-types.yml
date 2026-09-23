@@ -1,0 +1,25 @@
+name: KaiGPT Error Reference
+generated: '2026-09-23'
+method: searched
+source: https://gptzzz.ai/docs/api-error-codes/
+format: gateway-json
+envelope:
+  gateway_native: '{"code": "<UPPER_SNAKE_CODE>", "message": "<text>"}'
+  gateway_native_evidence: 'probed 2026-09-23: GET https://gptzzz.ai/v1/models -> 401 {"code":"API_KEY_REQUIRED","message":"API key is required in Authorization header (Bearer scheme), x-api-key header, or x-goog-api-key header"}'
+  upstream_passthrough: The docs say a gateway may return its own errors (502/503/504) or pass through the upstream vendor's error; OpenAI-style error.type, Claude type and Gemini status are listed per vendor.
+note: >-
+  The published reference (verified 2026-09-04 per the page) is a cross-vendor handbook for OpenAI, Claude, Gemini,
+  DeepSeek and relay/gateway errors, not a catalog of KaiGPT-specific codes. Rows below are its general HTTP layer table
+  plus the relay-specific cases. The advice is "保存 request ID，按错误类型（error.type）分支，而不是按错误文案".
+problems:
+- {status: 400, title: 请求体格式错误、参数非法, retry: 否, remediation: 核对 JSON 结构与必填字段（如 Claude 的 max_tokens）}
+- {status: 401, title: 鉴权失败：Key 错/缺失/撤销, retry: 否, remediation: 检查鉴权头与 Key 状态，别循环重试, gateway_code: API_KEY_REQUIRED}
+- {status: 403, title: 无权限：地区限制、模型未授权, retry: 否, remediation: 确认账号/Key 是否有该模型权限、是否受地区限制}
+- {status: 404, title: 路径或模型 ID 不存在, retry: 否, remediation: 核对 Base URL 是否多/少 /v1，model 名是否拼错}
+- {status: 422, title: 参数语义不合法（值超范围等）, retry: 否, remediation: 检查取值范围（temperature、max_tokens 上限等）}
+- {status: 429, title: 限速或额度/余额不足, retry: 看情况, remediation: 区分限速与欠费：限速退避重试，欠费先充值}
+- {status: 500, title: 服务端内部错误, retry: 是（有限）, remediation: 带抖动重试，保存 request ID 反馈}
+- {status: 502, title: 网关/上游不可达、过载、超时, retry: 是（有限）, remediation: 指数退避+熔断，检查是否上游故障}
+- {status: 503, title: 网关/上游不可达、过载、超时, retry: 是（有限）, remediation: 指数退避+熔断，检查是否上游故障}
+- {status: 504, title: 网关/上游不可达、过载、超时, retry: 是（有限）, remediation: 指数退避+熔断，检查是否上游故障}
+- {status: 529, title: 上游过载（Claude 常见）, retry: 是（有限）, remediation: 带抖动限次重试}
