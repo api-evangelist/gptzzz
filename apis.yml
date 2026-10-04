@@ -23,6 +23,15 @@ tags:
 - Artificial Intelligence
 - LLM Gateway
 - API Relay
+- OpenAI-Compatible
+- Claude
+- Gemini
+- LLM
+- China
+tags_raw:
+- Artificial Intelligence
+- LLM Gateway
+- API Relay
 - OpenAI Compatible
 - Claude
 - Gemini
@@ -77,6 +86,10 @@ apis:
   humanURL: https://gptzzz.ai/docs/
   baseURL: https://gptzzz.ai/v1
   tags:
+  - OpenAI-Compatible
+  - Chat
+  - LLM Gateway
+  tags_raw:
   - OpenAI Compatible
   - Chat
   - LLM Gateway
@@ -93,8 +106,11 @@ apis:
     Claude clients must use that protocol configuration rather than the OpenAI request body; the gateway accepts the key in
     the x-api-key header.
   humanURL: https://gptzzz.ai/blog/claude-api-quickstart/
-  baseURL: https://gptzzz.ai
   tags:
+  - Claude
+  - Message
+  - LLM Gateway
+  tags_raw:
   - Claude
   - Messages
   - LLM Gateway

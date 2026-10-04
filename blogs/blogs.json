@@ -1,0 +1,21 @@
+{
+  "repo": "gptzzz",
+  "feeds": [
+    {
+      "source": "https://gptzzz.ai/support/",
+      "feed_url": "https://gptzzz.ai/blog/feed.xml",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    },
+    {
+      "source": "https://gptzzz.ai/blog/feed.xml",
+      "feed_url": "https://gptzzz.ai/blog/feed.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    }
+  ],
+  "post_count": 17,
+  "fetched": "2026-10-03T12:30:02Z"
+}
