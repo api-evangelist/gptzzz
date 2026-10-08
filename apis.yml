@@ -38,6 +38,10 @@ tags_raw:
 - Large Language Models
 - China
 common:
+- type: Plans
+  url: plans/gptzzz-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/gptzzz-rate-limits.yml
 - type: Conventions
   url: conventions/gptzzz-conventions.yml
 - type: Authentication
