@@ -1,4 +1,4 @@
-name: KaiGPT Error Reference
+name: GPTZZZ Error Reference
 generated: '2026-09-23'
 method: searched
 source: https://gptzzz.ai/docs/api-error-codes/
@@ -9,7 +9,7 @@ envelope:
   upstream_passthrough: The docs say a gateway may return its own errors (502/503/504) or pass through the upstream vendor's error; OpenAI-style error.type, Claude type and Gemini status are listed per vendor.
 note: >-
   The published reference (verified 2026-09-04 per the page) is a cross-vendor handbook for OpenAI, Claude, Gemini,
-  DeepSeek and relay/gateway errors, not a catalog of KaiGPT-specific codes. Rows below are its general HTTP layer table
+  DeepSeek and relay/gateway errors, not a catalog of GPTZZZ-specific codes. Rows below are its general HTTP layer table
   plus the relay-specific cases. The advice is "保存 request ID，按错误类型（error.type）分支，而不是按错误文案".
 problems:
 - {status: 400, title: 请求体格式错误、参数非法, retry: 否, remediation: 核对 JSON 结构与必填字段（如 Claude 的 max_tokens）}

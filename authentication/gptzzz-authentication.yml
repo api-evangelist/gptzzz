@@ -1,11 +1,11 @@
-name: KaiGPT Authentication
+name: GPTZZZ Authentication
 generated: '2026-09-23'
 method: searched
 source: https://gptzzz.ai/docs/
 docs: https://gptzzz.ai/docs/
 note: >-
   No OpenAPI is published. The docs show only generic Bearer authentication ("下面只演示通用 Bearer 鉴权") with a
-  KaiGPT API key created in the console. The live gateway's anonymous 401 (probed 2026-09-23 on
+  GPTZZZ API key created in the console. The live gateway's anonymous 401 (probed 2026-09-23 on
   https://gptzzz.ai/v1/models and POST https://gptzzz.ai/v1/messages) names three accepted key locations:
   "API key is required in Authorization header (Bearer scheme), x-api-key header, or x-goog-api-key header".
   The Gemini-style route https://gptzzz.ai/v1beta/models answers 401 {"error":{"code":401,"message":"API key is required","status":"UNAUTHENTICATED"}}.
@@ -13,19 +13,19 @@ schemes:
 - name: bearerAuth
   type: http
   scheme: bearer
-  description: 'KaiGPT API key as Authorization: Bearer <key>; the scheme the docs demonstrate for OpenAI-compatible clients.'
+  description: 'GPTZZZ API key as Authorization: Bearer <key>; the scheme the docs demonstrate for OpenAI-compatible clients.'
   evidence: https://gptzzz.ai/docs/
 - name: apiKeyHeader
   type: apiKey
   in: header
   parameter: x-api-key
-  description: KaiGPT API key in the x-api-key header (Anthropic Messages style), accepted per the gateway's 401 message.
+  description: GPTZZZ API key in the x-api-key header (Anthropic Messages style), accepted per the gateway's 401 message.
   evidence: https://gptzzz.ai/v1/models (401, probed)
 - name: googApiKeyHeader
   type: apiKey
   in: header
   parameter: x-goog-api-key
-  description: KaiGPT API key in the x-goog-api-key header (Gemini style), accepted per the gateway's 401 message.
+  description: GPTZZZ API key in the x-goog-api-key header (Gemini style), accepted per the gateway's 401 message.
   evidence: https://gptzzz.ai/v1/models (401, probed)
 key_handling: >-
   Docs: keep the key only in server-side secret management or local environment variables; never in front-end code,

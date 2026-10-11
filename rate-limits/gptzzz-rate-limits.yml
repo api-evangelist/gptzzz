@@ -1,7 +1,7 @@
-name: KaiGPT Rate Limits
+name: GPTZZZ Rate Limits
 generated: '2026-09-23'
 method: none
 source: https://gptzzz.ai/docs/
 limit_count: 0
 limits: []
-note: KaiGPT publishes no numeric rate limits; the docs say limits (限额) are shown in the console and that 429 means either rate limiting or insufficient balance.
+note: GPTZZZ publishes no numeric rate limits; the docs say limits (限额) are shown in the console and that 429 means either rate limiting or insufficient balance.

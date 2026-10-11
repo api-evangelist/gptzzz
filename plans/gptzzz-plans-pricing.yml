@@ -1,14 +1,167 @@
-name: KaiGPT Plans
-generated: '2026-09-23'
-method: none
-source: https://gptzzz.ai/docs/
-audience: unclear
-pricing_basis: none
-published: false
-delivery: {model: managed}
-plan_count: 0
-plans: []
-note: >-
-  No public prices. The docs say "模型广场 目前尚未列出公开型号和价格" and that model IDs, billing units and group
-  multipliers are shown in the console; the public model plaza API (https://gptzzz.ai/api/v1/model-plaza, probed
-  2026-09-23) returned {"code":0,"message":"success","data":{"description":"","groups":[]}}. https://gptzzz.ai/pricing returns 404.
+name: GPTZZZ Plans
+generated: '2026-10-11'
+method: searched
+source: https://gptzzz.ai/pricing/
+audience: developer-api
+pricing_basis: usage
+published: true
+delivery:
+  model: managed
+plan_count: 10
+note: 'Public model list with prices at https://gptzzz.ai/pricing/ (page dated 2026-09-30): 48 models from 7 vendors in 10
+  billing groups. The same data is served as JSON at https://gptzzz.ai/api/v1/model-plaza (saved verbatim 2026-10-11 as plans/gptzzz-model-plaza.json):
+  per group a rate_multiplier, and per model the group price card before the multiplier (pricing) and the vendor list price
+  (official_pricing). Billing basis per the pricing page: prepaid balance, a ¥1 top-up gives $1 of balance (single top-up
+  ¥10-¥2000, Alipay, no fee); listed prices are per 1M tokens and already include the group multiplier, so the number is the
+  RMB price; image models (gpt-image) are charged per image (¥0.20/image) and only in the opai puls / opai pro groups. Each
+  API key belongs to one billing group.'
+plans:
+- name: opai puls分组
+  price: per model, see /pricing/
+  currency: CNY
+  description: Billing group (platform openai), rate_multiplier 0.05, 14 models. Each API key belongs to one group; listed
+    per-1M-token prices on /pricing/ already include this multiplier.
+  features:
+  - codex-auto-review
+  - gpt-5.2
+  - gpt-5.3-codex-spark
+  - gpt-5.4
+  - gpt-5.4-mini
+  - gpt-5.5
+  - gpt-5.6
+  - gpt-5.6-luna
+  - gpt-5.6-sol
+  - gpt-5.6-terra
+  - gpt-6
+  - gpt-6-astra
+  - gpt-6-luna
+  - gpt-6-sol
+  limits: []
+- name: opai pro分组
+  price: per model, see /pricing/
+  currency: CNY
+  description: Billing group (platform openai), rate_multiplier 0.1, 14 models. Each API key belongs to one group; listed
+    per-1M-token prices on /pricing/ already include this multiplier.
+  features:
+  - codex-auto-review
+  - gpt-5.2
+  - gpt-5.3-codex-spark
+  - gpt-5.4
+  - gpt-5.4-mini
+  - gpt-5.5
+  - gpt-5.6
+  - gpt-5.6-luna
+  - gpt-5.6-sol
+  - gpt-5.6-terra
+  - gpt-6
+  - gpt-6-astra
+  - gpt-6-luna
+  - gpt-6-sol
+  limits: []
+- name: pro200-500不降智分组
+  price: per model, see /pricing/
+  currency: CNY
+  description: Billing group (platform openai), rate_multiplier 0.15, 9 models. Each API key belongs to one group; listed
+    per-1M-token prices on /pricing/ already include this multiplier.
+  features:
+  - codex-auto-review
+  - gpt-5.5
+  - gpt-5.6-luna
+  - gpt-5.6-sol
+  - gpt-5.6-terra
+  - gpt-6-astra
+  - gpt-6-luna
+  - gpt-6-sol
+  - gpt-6.1-sol
+  limits: []
+- name: Claude官key
+  price: per model, see /pricing/
+  currency: CNY
+  description: Billing group (platform anthropic), rate_multiplier 0.39, 12 models. Each API key belongs to one group; listed
+    per-1M-token prices on /pricing/ already include this multiplier.
+  features:
+  - claude-fable-5
+  - claude-fable-5.1
+  - claude-haiku-4.5
+  - claude-opus-4.5
+  - claude-opus-4.6
+  - claude-opus-4.7
+  - claude-opus-4.8
+  - claude-opus-5
+  - claude-opus-5.5
+  - claude-sonnet-4.5
+  - claude-sonnet-4.6
+  - claude-sonnet-5
+  limits: []
+- name: GPT官key
+  price: per model, see /pricing/
+  currency: CNY
+  description: Billing group (platform openai), rate_multiplier 0.54, 14 models. Each API key belongs to one group; listed
+    per-1M-token prices on /pricing/ already include this multiplier.
+  features:
+  - gpt-5-mini
+  - gpt-5-nano
+  - gpt-5.2
+  - gpt-5.4
+  - gpt-5.4-nano
+  - gpt-5.4-pro
+  - gpt-5.5
+  - gpt-5.5-instant
+  - gpt-5.6-luna
+  - gpt-5.6-sol
+  - gpt-5.6-terra
+  - gpt-6-astra
+  - gpt-6-luna
+  - gpt-6-sol
+  limits: []
+- name: MiMo 小米官key
+  price: per model, see /pricing/
+  currency: CNY
+  description: Billing group (platform openai), rate_multiplier 0.64, 4 models. Each API key belongs to one group; listed
+    per-1M-token prices on /pricing/ already include this multiplier.
+  features:
+  - mimo-v2.5
+  - mimo-v2.5-pro
+  - mimo-v2.6-flash
+  - mimo-v2.6-pro
+  limits: []
+- name: Grok官key
+  price: per model, see /pricing/
+  currency: CNY
+  description: Billing group (platform grok), rate_multiplier 0.67, 2 models. Each API key belongs to one group; listed per-1M-token
+    prices on /pricing/ already include this multiplier.
+  features:
+  - grok-4.5
+  - grok-4.6
+  limits: []
+- name: Qwen 通义官key
+  price: per model, see /pricing/
+  currency: CNY
+  description: Billing group (platform openai), rate_multiplier 0.7, 2 models. Each API key belongs to one group; listed per-1M-token
+    prices on /pricing/ already include this multiplier.
+  features:
+  - qwen3.8-27b
+  - qwen3.8-flash
+  limits: []
+- name: DeepSeek官key
+  price: per model, see /pricing/
+  currency: CNY
+  description: Billing group (platform deepseek), rate_multiplier 0.77, 2 models. Each API key belongs to one group; listed
+    per-1M-token prices on /pricing/ already include this multiplier.
+  features:
+  - deepseek-v4-pro
+  - deepseek-v4.1-flash
+  limits: []
+- name: Gemini官key
+  price: per model, see /pricing/
+  currency: CNY
+  description: Billing group (platform openai), rate_multiplier 0.92, 6 models. Each API key belongs to one group; listed
+    per-1M-token prices on /pricing/ already include this multiplier.
+  features:
+  - gemini-3-flash
+  - gemini-3.1-pro
+  - gemini-3.5-flash
+  - gemini-3.5-flash-lite
+  - gemini-3.6-flash
+  - gemini-3.8-flash
+  limits: []

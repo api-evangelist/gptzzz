@@ -1,4 +1,4 @@
-name: KaiGPT Conventions
+name: GPTZZZ Conventions
 generated: '2026-09-23'
 method: searched
 source: https://gptzzz.ai/docs/
@@ -10,7 +10,7 @@ base_urls:
 request_id: Docs ask integrators to record the request identifier from response headers with UTC time, model ID and HTTP status for every failed call; the header name is not documented.
 errors: {see: errors/gptzzz-problem-types.yml}
 lifecycle: {see: lifecycle/gptzzz-lifecycle.yml}
-rate_limit_signaling: Not documented for KaiGPT itself; the error reference advises reading the retry-after header on 429 (OpenAI-compatible) and distinguishing rate limiting from insufficient balance.
+rate_limit_signaling: Not documented for GPTZZZ itself; the error reference advises reading the retry-after header on 429 (OpenAI-compatible) and distinguishing rate limiting from insufficient balance.
 idempotency:
   coverage: none
   note: No idempotency key or replay protection is documented. The docs instead warn that retries must not cross non-repeatable business operations ("重试不会跨越不可重复的业务操作").

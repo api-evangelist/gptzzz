@@ -1,4 +1,4 @@
-# KaiGPT (gptzzz)
+# GPTZZZ (gptzzz)
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,7 +64,7 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-KaiGPT (gptzzz.ai) is an independent third-party AI API relay (中转站) and multi-model gateway for Chinese-speaking developers,
+GPTZZZ (gptzzz.ai) is an independent third-party AI API relay (中转站) and multi-model gateway for Chinese-speaking developers,
 exposing an OpenAI-compatible interface at `https://gptzzz.ai/v1` and a Claude Messages route at `https://gptzzz.ai/v1/messages`.
 It resells access to other providers' model APIs and states it is not affiliated with those vendors.
 
