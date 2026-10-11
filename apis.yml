@@ -101,7 +101,7 @@ common:
   url: https://gptzzz.ai/docs/api-error-codes/
 
 apis:
-- aid: gptzzz:kaigpt-openai-compatible-api
+- aid: gptzzz:gptzzz-openai-compatible-api
   name: GPTZZZ OpenAI-Compatible API
   description: 'OpenAI-compatible relay interface. The docs give the Base URL https://gptzzz.ai/v1 for OpenAI-compatible clients
     (which append /chat/completions or /responses); requests are authenticated with a GPTZZZ API key sent as Authorization:
@@ -123,7 +123,7 @@ apis:
     url: https://gptzzz.ai/blog/openai-api-quickstart/
   - type: Documentation
     url: https://gptzzz.ai/blog/openai-compatible-api-migration/
-- aid: gptzzz:kaigpt-claude-messages-api
+- aid: gptzzz:gptzzz-claude-messages-api
   name: GPTZZZ Claude Messages API
   description: Claude Messages relay route. The docs give https://gptzzz.ai/v1/messages for Claude Messages requests and say
     Claude clients must use that protocol configuration rather than the OpenAI request body; the gateway accepts the key in
