@@ -2,7 +2,7 @@
   "repo": "gptzzz",
   "feeds": [
     {
-      "source": "https://gptzzz.ai/support/",
+      "source": "https://gptzzz.ai/blog/",
       "feed_url": "https://gptzzz.ai/blog/feed.xml",
       "title": "",
       "saved": 0,
@@ -16,6 +16,6 @@
       "method": "feed"
     }
   ],
-  "post_count": 17,
-  "fetched": "2026-10-03T12:30:02Z"
+  "post_count": 33,
+  "fetched": "2026-10-10T13:15:00Z"
 }
