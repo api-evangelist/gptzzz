@@ -165,3 +165,69 @@ plans:
   - gemini-3.6-flash
   - gemini-3.8-flash
   limits: []
+x-canonical:
+  generated: '2026-10-18'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models: []
+  units: []
+  plans:
+  - name: opai puls分组
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: opai pro分组
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: pro200-500不降智分组
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Claude官key
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: GPT官key
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: MiMo 小米官key
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Grok官key
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Qwen 通义官key
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: DeepSeek官key
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
+  - name: Gemini官key
+    access: other
+    model: unstated
+    model_how: derived
+    units: []
+    periods: []
