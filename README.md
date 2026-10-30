@@ -1,4 +1,4 @@
-# GPTZZZ (gptzzz)
+# GPTZZZ
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,12 +64,106 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-GPTZZZ (gptzzz.ai) is an independent third-party AI API relay (中转站) and multi-model gateway for Chinese-speaking developers,
-exposing an OpenAI-compatible interface at `https://gptzzz.ai/v1` and a Claude Messages route at `https://gptzzz.ai/v1/messages`.
-It resells access to other providers' model APIs and states it is not affiliated with those vendors.
+GPTZZZ (gptzzz.ai, subtitle "AI API 中转服务 中转站") is an independent third-party AI API relay (中转站) and multi-model gateway for Chinese-speaking developers. It exposes an OpenAI-compatible interface at https://gptzzz.ai/v1 (chat completions, Responses, embeddings, images), a Claude Messages route at https://gptzzz.ai/v1/messages and a Gemini-style v1beta surface, authenticated with a GPTZZZ API key via Authorization Bearer, x-api-key or x-goog-api-key. Public prices are listed at https://gptzzz.ai/pricing/ (48 models from 7 vendors in 10 billing groups, also served as JSON at /api/v1/model-plaza), billed from a prepaid balance (a ¥1 top-up gives $1 of balance); each API key belongs to one billing group. It also ships a desktop client (macOS, Windows x64 and ARM64) that adds GPTZZZ as a provider in Claude Code, Codex, 小龙虾, 爱马仕 and Grok, and a Chinese knowledge base on relay selection, security and compliance. The same team runs kaigpt.ai, a separate product with separate billing. GPTZZZ states it is not affiliated with the model vendors it routes to; it resells access to other providers' model APIs rather than training models itself.
 
-- Website: https://gptzzz.ai/
-- Documentation: https://gptzzz.ai/docs/
-- Status: https://gptzzz.ai/status/
+**Areas:** Artificial Intelligence · LLM Gateway · API Relay · OpenAI-Compatible · Claude · Gemini · LLM · China
 
-See `apis.yml` for the full profile.
+## GPTZZZ on APIs.io
+
+Everything profiled for GPTZZZ is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/gptzzz/](https://apis.io/providers/gptzzz/)** — or go straight to one of the APIs or properties below.
+
+### APIs (2)
+
+- [GPTZZZ OpenAI-Compatible API](https://apis.io/apis/gptzzz/gptzzz-openai-compatible-api/) — OpenAI-compatible relay interface. The docs give the Base URL https://gptzzz.ai/v1 for OpenAI-compatible clients (which append /chat/completions or…
+- [GPTZZZ Claude Messages API](https://apis.io/apis/gptzzz/gptzzz-claude-messages-api/) — Claude Messages relay route. The docs give https://gptzzz.ai/v1/messages for Claude Messages requests and say Claude clients must use that protocol…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Gptzzz Authentication](https://apis.io/security/gptzzz/gptzzz-authentication/)
+- [Gptzzz Domain Security](https://apis.io/security/gptzzz/gptzzz-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Gptzzz Plans Pricing](https://apis.io/plans/gptzzz/gptzzz-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Gptzzz Rate Limits](https://apis.io/rate-limits/gptzzz/gptzzz-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://gptzzz.ai/)
+- [Documentation](https://gptzzz.ai/docs/)
+- [Getting started](https://gptzzz.ai/blog/api-zhongzhuan-how-to-use/)
+- [Pricing](https://gptzzz.ai/pricing/)
+- [Sign up](https://gptzzz.ai/register)
+- [Support](https://gptzzz.ai/support/)
+- [Blog](https://gptzzz.ai/blog/)
+- [Status](https://gptzzz.ai/status/)
+
+## API Evangelist rating
+
+**Kin Score 27.0** — thin · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 15.8 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 55.3 |
+
+**Agent readiness 7.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 10.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/gptzzz/](https://apis.io/providers/gptzzz/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for GPTZZZ: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/gptzzz/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
